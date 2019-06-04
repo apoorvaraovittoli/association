@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @student.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @student.age %>
+</p>
+
+<%= link_to 'Edit', edit_teacher_student_path(@teacher,@student) %> |
+<%= link_to 'Back', teacher_students_path(@teacher) %>
+
+
+<% if @student.birthday.present? %>
+	<%= link_to 'edit date of birth', edit_teacher_student_birthday_path(@teacher,@student,@student.birthday) %>
+<% else %>
+	<%= link_to 'New date of birth', new_teacher_student_birthday_path(@teacher,@student) %>
+<% end %>
+
+
+
+
+

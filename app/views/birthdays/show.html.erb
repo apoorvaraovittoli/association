@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @birthday.date_of_birth %>
+</p>
+
+
+<%= link_to 'Edit', edit_teacher_student_birthday_path(@teacher,@student,@birthday) %> |
+<%= link_to 'Back', root_path %>
